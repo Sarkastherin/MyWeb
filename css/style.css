@@ -1,0 +1,469 @@
+/* Font Responsive  
+font-size: 
+calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+ */
+:root{
+    --primary: #FF5C55;
+    --background-one: #1E2233;
+    --background-two: #24273D;
+    --font-color: #F6EBDC;
+    --ligthing: #3F4664;
+}
+html{
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1440 - 320)));
+    *font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-color);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(30, 34, 51, 0.83), rgba(30, 34, 51, 0.83)),url(/img/backgroub-portada.jpg);
+    *background-repeat: no-repeat;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+}
+.header-navbar{
+    padding: 1.2rem 1.5rem 0;
+}
+.navbar-brand{
+    display: flex;
+    justify-content: space-between;
+}
+.text-brand{
+    text-decoration: none;
+    font-size: 3rem;
+    color: var(--primary);
+    font-family: 'Great Vibes', cursive;
+}
+.button-navbar{
+    background: none;
+    border: none;
+    color: var(--font-color);
+}
+.header-navbar-menu{
+    margin-left: 30px;
+    position: fixed;
+    width: 40%;
+    display: none;
+    animation-name: fadeInLeft;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+    background-color: var(--background-one);
+}
+.menu-nav{
+    list-style-type: none;
+    padding: 10px 15px;
+}
+.menu-link{
+    text-decoration: none;
+    color: var(--font-color);
+}
+.menu-link li{
+    border-bottom: var(--ligthing) 1px solid;
+    padding-bottom: 5px;
+}
+@keyframes fadeInLeft{
+    from{right:-300px;opacity:0} to{right:0;opacity:1}
+}
+.btn-contactme{
+    display: none;
+}
+.header-portada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+    row-gap: 1rem;
+}
+.portada-img{
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    background-image: url(/img/img-portada.JPG);
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+}
+.portada-name{
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: 400;
+    /* text-shadow: -1px 0px var(--font-color); */
+    margin-top: 1.5rem;
+}
+
+.section-conoceme, .section-my-work, .section-get-in-touch, .section-thakyou{
+    background-color: var(--background-one);
+}
+.conoceme-box-picture{
+    min-width: 270px;
+    max-width: 400px;
+    min-height: 370px;
+    max-height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+.conoceme-picture-me{
+    width: 100%;
+}
+.conoceme-about-me{
+   max-width: 500px;
+   margin: 2rem auto;
+}
+
+.section-text{
+    margin: 0rem 0rem 2rem 1.2rem;
+    line-height: 1.6rem;
+}
+.card-id{
+    margin-left: 1.2rem;
+    border: var(--primary) solid 1px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.section-what-i-do,.section-my-blog,.footer,.footer-thankyou{
+    background-color: var(--background-two);
+}
+/* clases generales */
+/* Botones */
+.btn{
+    background: none;
+    border: var(--primary) 1px solid;
+    border-radius: 5PX;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.75rem;
+}
+.btn:hover{
+    background-color: var(--primary);
+    color: var(--font-color);
+}
+/* Titulo de secciones (cabecera) */
+.header-section{
+    margin-bottom: 3rem;
+}
+.section-subtitle{
+    color: var(--primary);
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.section-title{
+    font-size: 2.6rem;
+    font-weight: 500;
+    width: fit-content;
+    border: var(--primary) 3px;
+    *padding: 0 0 0.5rem 1.1rem;
+    margin: 1.2rem 0 0 1.2rem;
+    border-style: none none groove none;
+    font-family: 'Great Vibes', cursive;
+}
+.menu-link:hover{
+    color: var(--primary);
+}
+/* Contenedor */
+.container{
+    max-width: 900px;
+    padding: 2rem;
+    margin: auto;
+}
+/* Fin clases generales */
+.services{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+}
+.card-services{
+    display: flex;
+    flex-direction: column;
+    border: var(--primary) 1px solid;
+    width: 270px;
+    border-radius: 10px;
+    padding: 1.8rem;
+}
+.card-services-img{
+    width: 84px;
+}
+.card-services-title{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+.nav-my-work{
+    margin-left: 1.2rem;
+    display: flex;
+}
+.nav-my-work ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+.filter-portfolio{
+    background: none;
+    border: none;
+    color: var(--font-color);
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+.filter-portfolio:hover{
+    color: var(--primary);
+}
+.container-card-my-work{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+}
+.card-my-work{
+    position: relative;
+    border-radius: 5px;
+    height: 290px;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+    color: transparent;
+    width: 400px;
+    max-width: 290px;
+    
+}
+.img-my-work_1{
+    background-image: url(https://cdn.dribbble.com/userupload/4060295/file/original-bd82093120f432f308ef4bd36e959f5f.png?compress=1&resize=752x);
+}
+.img-my-work_1:hover{
+    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(https://cdn.dribbble.com/userupload/4060295/file/original-bd82093120f432f308ef4bd36e959f5f.png?compress=1&resize=752x);
+    color: var(--font-color);
+}
+.img-my-work_2{
+    background-image: url(https://cdn.dribbble.com/users/2742725/screenshots/15327172/media/4e53f236e119c565354f3b3b2d6a4719.png);
+}
+.img-my-work_2:hover{
+    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(https://cdn.dribbble.com/users/2742725/screenshots/15327172/media/4e53f236e119c565354f3b3b2d6a4719.png);
+    color: var(--font-color);
+}
+
+.card-my-work-description{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2.5rem 1rem 1rem;
+}
+.lastest-posts{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+}
+.card-post{
+    border: var(--ligthing) 1px solid;
+    max-width: 47rem;
+    border-radius: 0 10px 10px;
+    width: 440px;
+    max-width: 290px;
+}
+.card-post-title{
+    font-size: 1.2rem;
+    margin: 1.5rem 1rem;
+    padding-bottom: .5rem;
+    border: var(--ligthing) 1px solid;
+    border-style: none none solid none;
+}
+.card-post-img{
+    width: 100%;
+}
+.card-post-text{
+    margin: 0 1rem;
+}
+.card-post-btn{
+    height: 40px;
+}
+.keep-reading{
+    display: flex;
+    justify-content: end;
+    margin: 1rem;
+}
+.media-contact{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    justify-content: center;
+}
+.form-contact-me{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 290px;
+}
+.input-form{
+    background: none;
+    border: var(--ligthing) 1px solid;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.8rem;
+    width: 100%;
+    color: #F6EBDC;
+}
+.input-form::placeholder{
+    color: var(--ligthing);
+}
+.input-form:focus-visible{
+    background-color: var(--ligthing);
+    color: var(--font-color);
+}
+.form-btn{
+    width: 100%;
+}
+.social-media{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 400px;
+    max-width: 290px;
+}
+
+.button-media-icon{
+    border: var(--ligthing) 1px solid;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--ligthing);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem 1rem;
+}
+.icon-social-media{
+    font-size: 2.5rem;
+    color: inherit
+}
+.button-media-icon:hover{
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.container-thakyou{
+    text-align: center;
+    padding: 6rem;
+}
+.thankyou_title{
+    margin-bottom: 3rem;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 2rem;
+}
+.thankyou_go_to{
+    color: var(--primary);
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.paragraph-info{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.list-of-links{
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    font-size: .9rem;
+}
+.list-of-links a{
+    color: var(--primary);
+}
+.footer-thankyou{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+.footer-icon{
+    color: var(--font-color);
+    font-size: 2rem;
+}
+.footer-icon:hover{
+    color: var(--primary);
+}
+@media (min-width: 768px){
+    .header-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-navbar{
+        display: none;
+    }
+    .header-navbar-menu{
+        animation: none;
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: transparent;
+    }
+    .menu-nav{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.2rem;
+    }
+    .btn-contactme{
+        display: block;
+    }
+    
+    .container-conoceme{
+        display: flex;
+        flex-direction: row;
+    }
+    .conoceme-about-me{
+        margin-inline-start: 1rem;
+        margin-block-start: 0;
+        width: 100%;
+    }
+   
+    .menu-link li{
+        border: none;
+    }
+    .services{
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.5rem;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .card-services{
+        padding: 1.2rem;
+    }
+    .card-post-text{
+        font-size: .9rem;
+    }
+    /* .container-card-my-work{
+        width: 50%;
+        flex-direction: row;
+        column-gap: 2rem;
+    } */
+    
+    
+}
