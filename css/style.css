@@ -7,7 +7,7 @@ calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum vie
     --background-one: #1E2233;
     --background-two: #24273D;
     --font-color: #F6EBDC;
-    --ligthing: #3F4664;
+    --ligthing: #7c819b;
 }
 html{
     font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1440 - 320)));
@@ -24,7 +24,7 @@ body{
 .header{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(30, 34, 51, 0.83), rgba(30, 34, 51, 0.83)),url(/img/backgroub-portada.jpg);
+    background-image: linear-gradient(rgba(30, 34, 51, 0.83), rgba(30, 34, 51, 0.83)),url(/img/backgroub-portada.webp);
     *background-repeat: no-repeat;
     overflow: hidden;
     background-size:cover;
@@ -88,7 +88,7 @@ body{
     height: 8rem;
     background-color: var(--primary);
     border-radius: 50%;
-    background-image: url(/img/img-portada.JPG);
+    background-image: url(/img/img-portada.webp);
     overflow: hidden;
     background-size:cover;
     background-position: center;
@@ -115,6 +115,7 @@ body{
 }
 .conoceme-picture-me{
     width: 100%;
+    height: auto;
 }
 .conoceme-about-me{
    max-width: 500px;
@@ -195,6 +196,7 @@ body{
 }
 .card-services-img{
     width: 84px;
+    height: auto;
 }
 .card-services-title{
     font-size: 1.2rem;
@@ -243,17 +245,17 @@ body{
     
 }
 .img-my-work_1{
-    background-image: url(https://cdn.dribbble.com/userupload/4060295/file/original-bd82093120f432f308ef4bd36e959f5f.png?compress=1&resize=752x);
+    background-image: url(/img/porfolio_1.webp);
 }
 .img-my-work_1:hover{
-    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(https://cdn.dribbble.com/userupload/4060295/file/original-bd82093120f432f308ef4bd36e959f5f.png?compress=1&resize=752x);
+    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(/img/porfolio_1.png);
     color: var(--font-color);
 }
 .img-my-work_2{
-    background-image: url(https://cdn.dribbble.com/users/2742725/screenshots/15327172/media/4e53f236e119c565354f3b3b2d6a4719.png);
+    background-image: url(/img/porfolio_2.webp);
 }
 .img-my-work_2:hover{
-    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(https://cdn.dribbble.com/users/2742725/screenshots/15327172/media/4e53f236e119c565354f3b3b2d6a4719.png);
+    background-image: linear-gradient(rgba(30, 34, 51, 0),rgba(30, 34, 51, 0.60), rgba(30, 34, 51, 0.90)),url(/img/porfolio_2.png);
     color: var(--font-color);
 }
 
@@ -287,6 +289,7 @@ body{
 }
 .card-post-img{
     width: 100%;
+    height: auto;
 }
 .card-post-text{
     margin: 0 1rem;
